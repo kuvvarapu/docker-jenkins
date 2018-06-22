@@ -1,9 +1,10 @@
-stage "First step on build node"
-node('build'){
-    echo "This is buildserver"
-}
+node {
+  stage('build1server') {
+     if (env.BRANCH_NAME == 'master') {
+        echo "Master Brach"
+     }else {
+        echo "Not a master branch"
+     }
 
-stage "First step on stage node"
-node('stage'){
-    echo "This is stageserver"
+}
 }
