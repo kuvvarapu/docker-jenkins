@@ -1,12 +1,12 @@
 node {
   stage('build1server'){
      try {
-	echo "01"
+       	echo "01"
 
 }
-     catch (exc){
+  catch(exc){
         echo "02"
-	throw
+	      throw
 }
 
 }
