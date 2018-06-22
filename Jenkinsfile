@@ -3,9 +3,6 @@ node {
      try {
        	echo "01"
 }
-  catch(){
-        echo "02"
-	      throw
-}
+
 }
 }
