@@ -3,7 +3,7 @@ node {
      try {
        	echo "01"
 }
-  catch(exc){
+  catch(){
         echo "02"
 	      throw
 }
