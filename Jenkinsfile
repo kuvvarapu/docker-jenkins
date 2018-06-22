@@ -5,6 +5,7 @@ node {
         ssh 10.81.17.1 'ls'
      }else {
         echo "Not a master branch"
+        git url: 'git@github.com:kuvvarapu/Ossec_Automation.git'
      }
 
 }
