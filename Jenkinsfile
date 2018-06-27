@@ -3,9 +3,8 @@ pipeline {
     stages {
 	stage('Get the developer branch'){
           steps {
-	      script {	
-		git clone -b developer git@github.com:kuvvarapu/docker-jenkins.git
-}
+	     git branch: 'developer',
+		url: 'git@github.com:kuvvarapu/docker-jenkins.git'
 }
 	stage ('check the developer branch'){
 	  steps {
