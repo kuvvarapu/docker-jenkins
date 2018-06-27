@@ -8,10 +8,10 @@ pipeline {
 }
 }
 	stage ('check the developer branch'){
-	  steps {
 		when {
 		   branch 'developer'
 }
+          steps {  
 		echo "developer branch"
 }
 }
