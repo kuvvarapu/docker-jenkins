@@ -7,9 +7,9 @@ pipeline {
 		url: 'git@github.com:kuvvarapu/docker-jenkins.git'
 }
 }
-	stage ('check the developer branch'){
+	stage ('checking the developer branch'){
 		when {
-		   branch 'master'
+		   branch 'developer'
 }
           steps {  
 		sh: git branch
