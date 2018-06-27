@@ -1,11 +1,17 @@
-node {
-  stage('build1server') {
-     if (env.BRANCH_NAME == 'master') {
-        echo "Master Brach"
-     } else {
-        echo "Not a Master Branch"
-        git url: 'git@github.com:kuvvarapu/Ossec_Automation.git'
-     }
-
+pipeline {
+    agent any
+    stages {
+	stage('Get the developer branch'){
+          steps {
+		git url: 'git@github.com:kuvvarapu/docker-jenkins.git'
+}
+}
+	stage ('check the developer branch'){
+	  steps {
+		when {
+		   branch 'developer'
+}
+}
+}
 }
 }
