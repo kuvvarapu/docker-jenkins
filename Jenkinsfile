@@ -8,6 +8,7 @@ pipeline {
 }
 }
 	stage ('check the developer branch'){
+	 when { branch "developer/*" }
 	  steps {
 		sh 'git branch'
 }
