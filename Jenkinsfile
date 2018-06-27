@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent {label 'slavevm'}
     stages {
 	stage('Get the developer branch'){
           steps {
