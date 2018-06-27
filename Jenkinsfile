@@ -12,6 +12,7 @@ pipeline {
 		when {
 		   branch 'developer'
 }
+		echo "developer branch"
 }
 }
 }
