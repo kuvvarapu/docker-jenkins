@@ -9,10 +9,10 @@ pipeline {
 }
 	stage ('check the developer branch'){
 		when {
-		   branch 'developer'
+		   branch 'master'
 }
           steps {  
-		echo "developer branch"
+		sh: git branch
 }
 }
 }
