@@ -1,7 +1,7 @@
 node {
   stage('Validating developer branch'){
-	 sta = sh'(git branch)'
-	 echo "${sta}"
+	def sta = sh'(git branch)'
+	 assert "$sta"
 
 	if ( "${sta}" != 'developer' ){
 		echo 'I only execute on developer branch'
