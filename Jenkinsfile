@@ -3,7 +3,7 @@ node {
 	STAT = developer
 	 echo "${STAT}"
      echo 'printenv'
-	if ( "${STAT}"" == 'developer' ){
+	if ( "${STAT}" == 'developer' ){
 		echo 'I only execute on developer branch'
 }else {
 
