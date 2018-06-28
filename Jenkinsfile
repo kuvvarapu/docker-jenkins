@@ -10,13 +10,11 @@ pipeline {
 */
 	  stage ('DEPLOY') {
 	  when {
-		branch '*/null'
+		branch 'developer'
           } 
-
 	
 	   steps {
  	      sh 'printenv'
-	      echo env.BRANCH_NAME
 		 }
 }
 }
