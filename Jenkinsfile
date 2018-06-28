@@ -8,10 +8,10 @@ pipeline {
 		}
 		}
 	  stage ('DEPLOY') {
-/*	  when {
-		branch 'developer'
+	  when {
+		GIT_BRANCH == 'developer'
           } 
-*/
+
 	   steps {
 		sh 'printenv'
 
