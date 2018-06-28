@@ -3,8 +3,8 @@ node {
 //	def sta = sh '(git branch)'
 //	echo "${sta}"
   sh """
-    sta=`git branch`
-	if ( $sta == 'developer' ){
+    status=`git branch`
+	if ( $status == 'developer' ){
 		echo 'I only execute on developer branch'
 }else {
 
