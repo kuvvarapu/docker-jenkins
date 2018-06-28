@@ -8,11 +8,11 @@ pipeline {
 		}
 		}
 	  stage ('DEPLOY') {
-	  when {
-		branch 'developer'
-           } 
+#	  when {
+#		branch 'developer'
+#           } 
 	   steps {
-		sh 'git branch'
+		sh 'print env'
 
 		 }
 }
