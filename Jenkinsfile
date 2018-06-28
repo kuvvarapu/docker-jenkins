@@ -12,11 +12,11 @@ pipeline {
 		branch 'master'
 	       }
 
- 			   }
 	   steps {
 		sh 'git branch'
 
 		 }
+}
     post {
 	success {
 	  echo "Running build container"
