@@ -13,7 +13,7 @@ pipeline {
 
 }
     post {
-	success {
+	failure {
 	  echo "Running build container"
 
 }
