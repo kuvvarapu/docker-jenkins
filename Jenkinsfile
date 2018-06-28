@@ -10,7 +10,7 @@ pipeline {
 */
 	  stage ('DEPLOY') {
 	  when {
-		branch '*/developer'
+		branch '*/null'
           } 
 
 	
