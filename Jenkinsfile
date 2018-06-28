@@ -8,12 +8,13 @@ pipeline {
 }
 }
 	  stage ('DEPLOY') {
+	  when { branch 'developer' }
 	   steps {
-		sh 'g branch'
+		sh 'git branch'
 
 }
     post {
-	failure {
+	success {
 	  echo "Running build container"
 
 }
