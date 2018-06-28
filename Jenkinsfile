@@ -9,6 +9,8 @@ pipeline {
 		}
 	  stage ('DEPLOY') {
 	  when {
+		environment name: 'DEPLOY_TO',
+		value: 'developer'
 		branch 'origin/developer'
           } 
 
