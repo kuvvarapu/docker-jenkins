@@ -8,7 +8,9 @@ pipeline {
 }
 }
 	  stage ('DEPLOY') {
-	  when { branch 'developer' }
+	  when {
+		beforeAgent true 
+		branch 'developer' }
 	   steps {
 		sh 'git branch'
 
