@@ -5,25 +5,24 @@ pipeline {
           steps {
 	     git branch: 'developer',
 		url: 'git@github.com:kuvvarapu/docker-jenkins.git'
-}
-}
+		}
+		}
 	  stage ('DEPLOY') {
 	  when {
-		beforeAgent true 
 		branch 'master'
-}
+	       }
 
- }
+ 			   }
 	   steps {
 		sh 'git branch'
 
-}
+		 }
     post {
 	success {
 	  echo "Running build container"
 
-}
+	        }
 
-}
+         }
 }
 }
