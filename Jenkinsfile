@@ -1,14 +1,15 @@
 node {
   stage('Validating developer branch'){
-	def status = sh '(git branch)'
-	echo '${status}'
-
-	if ( "${status}" == 'developer' ){
+	def sta = sh '(git branch)'
+	echo ${sta}
+  sh """
+	if ( "${sta}" == 'developer' ){
 		echo 'I only execute on developer branch'
 }else {
 
 	echo 'I execute elsewhere'
 
 }
+"""
 }
 }
