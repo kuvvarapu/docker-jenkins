@@ -1,9 +1,9 @@
 node {
   stage('Validating developer branch'){
-	STAT = developer
-	 echo "${STAT}"
+	def stat = developer
+	 echo "${stat}"
      echo 'printenv'
-	if ( "${STAT}" == 'developer' ){
+	if ( "${stat}" == 'developer' ){
 		echo 'I only execute on developer branch'
 }else {
 
