@@ -16,10 +16,10 @@ pipeline {
 */
 
 	
-	   steps {
+//	   steps {
 	      def output = sh(script: 'git branch', returnStdout: true)
-	      print output	
-		 }
+	      print "${output}"	
+//		 }
 }
 }
     post {
