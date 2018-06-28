@@ -13,7 +13,7 @@ pipeline {
           } 
 */
 	   steps {
-		sh 'print env'
+		sh 'printenv'
 
 		 }
 }
