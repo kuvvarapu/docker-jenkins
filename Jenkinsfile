@@ -8,13 +8,14 @@ pipeline {
 		}
 		}
 	  stage ('DEPLOY') {
-	  when {
+/*	  when {
 		branch 'developer'
           } 
-
+*/
 	
 	   steps {
  	      sh 'printenv'
+	      echo 'env.BRANCH_NAME'
 		 }
 }
 }
