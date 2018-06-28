@@ -10,7 +10,13 @@ pipeline {
 	  stage ('DEPLOY') {
 	  when {
 		beforeAgent true 
-		branch 'developer' }
+		branch 'developer'
+		anyOf {
+		   environment name: 'DEPLOY_TO', value: 'developer'
+	
+}
+
+ }
 	   steps {
 		sh 'git branch'
 
