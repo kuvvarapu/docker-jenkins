@@ -8,18 +8,14 @@ pipeline {
 		}
 		}
 	  stage ('DEPLOY') {
-/*	  when {
-		environment name: 'DEPLOY_TO',
-		value: 'developer'
-		branch 'any'
+	  when {
+		branch 'developer'
           } 
-*/
 
 	
-//	   steps {
-	      def output = sh(script: 'git branch', returnStdout: true)
-	      print "${output}"	
-//		 }
+	   steps {
+ 	      sh 'printenv'
+		 }
 }
 }
     post {
