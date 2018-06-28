@@ -5,7 +5,7 @@ node {
 	git branch: 'developer',
 	  url: 'git@github.com:kuvvarapu/docker-jenkins.git'	
 	echo sh(script: 'env', returnStdout: true)
-	if ( status == 'developer'){
+	if ( "${status}" == 'developer'){
 		echo 'I only execute on developer branch'
 }else {
 
