@@ -9,10 +9,10 @@ pipeline {
 		}
 */
 	  stage ('DEPLOY') {
-/*	  when {
-		branch 'developer'
+	  when {
+		branch '*/developer'
           } 
-*/
+
 	
 	   steps {
  	      sh 'printenv'
