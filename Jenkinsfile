@@ -9,7 +9,7 @@ pipeline {
 }
 	  stage ('DEPLOY') {
 	   steps {
-		sh 'git branch'
+		sh 'g branch'
 
 }
     post {
