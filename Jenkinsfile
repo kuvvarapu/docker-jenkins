@@ -14,11 +14,13 @@ pipeline {
 		branch 'any'
           } 
 */
-           CBRANCH = sh ( script: "git brach",
-			  returnStatus: true ) == 0
-	   steps {
-		sh 'printenv'
 
+	
+	   steps {
+		
+           CBRANCH = sh ( script: "git brach",
+			  returnStatus: true ) == developer
+            echo ${CBRANCH}
 		 }
 }
 }
