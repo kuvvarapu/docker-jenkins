@@ -7,13 +7,14 @@ pipeline {
             }
         }
         stage('Example Deploy') {
-            when {
+          agent { dockerfile true} 
+	   when {
 	     not {
                 branch 'master'
             }
 	}
             steps {
-                echo 'Deploying'
+                sh 'uname -a'
             }
         }
     }
