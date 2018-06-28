@@ -17,6 +17,7 @@ pipeline {
 
 		 }
 }
+}
     post {
 	success {
 	  echo "Running build container"
@@ -25,4 +26,4 @@ pipeline {
 
          }
 }
-}
+
