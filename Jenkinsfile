@@ -12,12 +12,11 @@ pipeline {
 	  espression {
                  return env.BRANCH_NAME == 'developer';
 	       }
-            
+           } 
 	   steps {
 		sh 'git branch'
 
 		 }
-}
 }
 }
     post {
