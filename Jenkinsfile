@@ -17,7 +17,8 @@ pipeline {
 
 	
 	   steps {
-	      def output = sh returnStdout: true, script: 'git branch'	
+	      def output = sh(script: 'git branch', returnStdout: true)
+	      print output	
 		 }
 }
 }
