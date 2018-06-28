@@ -6,7 +6,8 @@ pipeline {
 	     git branch: 'developer',
 		url: 'git@github.com:kuvvarapu/docker-jenkins.git'
 		}
-*/		}
+		}
+*/
 	  stage ('DEPLOY') {
 /*	  when {
 		branch 'developer'
