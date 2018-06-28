@@ -11,7 +11,7 @@ pipeline {
 	  when {
 		environment name: 'DEPLOY_TO',
 		value: 'developer'
-		branch 'origin/developer'
+		branch 'any'
           } 
 
 	   steps {
