@@ -1,6 +1,6 @@
 node {
   stage('Validating developer branch'){
-	def status = sh '(git branch|tail -1|tr -d "*")'
+	def status = sh '(git branch)'
 	echo "${status}"
 
 	if ( "${status}" == 'developer' ){
