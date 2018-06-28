@@ -8,12 +8,14 @@ pipeline {
 		}
 		}
 	  stage ('DEPLOY') {
-	  when {
+/*	  when {
 		environment name: 'DEPLOY_TO',
 		value: 'developer'
 		branch 'any'
           } 
-
+*/
+           CBRANCH = sh ( script: "git brach",
+			  returnStatus: true ) == developer
 	   steps {
 		sh 'printenv'
 
