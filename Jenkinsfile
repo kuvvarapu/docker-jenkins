@@ -9,12 +9,13 @@ pipeline {
 		}
 */
 	  stage ('DEPLOY') {
-	  when {
+/*	  when {
 		branch 'developer'
-          } 
-	
+         } 
+*/	
 	   steps {
  	      sh 'printenv'
+	      sh '$(pwd)/CI-CD/branchcheck.sh' 
 		 }
 }
 }
