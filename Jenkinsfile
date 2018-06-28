@@ -1,21 +1,11 @@
-pipeline {
-    agent any
-    stages {
-        stage('Example Build') {
-            steps {
-                echo 'Hello World'
-            }
-        }
-        stage('Example Deploy') {
-          agent { dockerfile true} 
-	   when {
-	     not {
-                branch 'master'
-            }
-	}
-            steps {
-                sh 'uname -a'
-            }
-        }
-    }
+node {
+  stage('checking the brach'){
+	if (env.BRANCH_NAME == 'developer'){
+		echo "I only execute on developer branch'
+}else {
+
+	echo "I execute elsewhere"
+
+}
+}
 }
