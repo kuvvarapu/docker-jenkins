@@ -6,8 +6,11 @@ pipeline {
 	     git branch: 'developer',
 		url: 'git@github.com:kuvvarapu/docker-jenkins.git'
 }
-	  steps {
+}
+	  stage ('DEPLOY') {
+	   steps {
 		sh 'git branch'
+
 }
 }
 }
