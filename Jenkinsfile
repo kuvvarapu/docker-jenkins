@@ -1,6 +1,6 @@
 node {
   stage('checking the brach'){
-	def status = sh 'git branch '
+	def status = sh '(git branch|td -d "*")'
 	echo "${status}"
 	git branch: 'developer',
 	  url: 'git@github.com:kuvvarapu/docker-jenkins.git'	
