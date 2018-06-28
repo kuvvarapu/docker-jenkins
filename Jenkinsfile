@@ -17,10 +17,7 @@ pipeline {
 
 	
 	   steps {
-		
-        def cbranch = sh ( script: "git brach",
-			  returnStatus: true ) == developer
-            echo "${cbranch}"
+	      def output = sh returnStdout: true, script: 'git branch'	
 		 }
 }
 }
