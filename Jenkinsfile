@@ -9,7 +9,7 @@ pipeline {
         stage('Example Deploy') {
             when {
 	     not {
-                branch 'developer'
+                branch 'master'
             }
 	}
             steps {
