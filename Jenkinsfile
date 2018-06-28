@@ -9,7 +9,7 @@ pipeline {
 		}
 	  stage ('DEPLOY') {
 	  when {
-		GIT_BRANCH == 'developer'
+		GIT_BRANCH 'developer'
           } 
 
 	   steps {
