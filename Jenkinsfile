@@ -10,10 +10,7 @@ pipeline {
 	  stage ('DEPLOY') {
 	  when {
 		beforeAgent true 
-		branch 'developer'
-		anyOf {
-		   environment name: 'DEPLOY_TO', value: 'developer'
-	
+		branch 'master'
 }
 
  }
