@@ -12,6 +12,13 @@ pipeline {
 		sh 'git branch'
 
 }
+    post {
+	success {
+	  echo "Running build container"
+
+}
+
+}
 }
 }
 }
