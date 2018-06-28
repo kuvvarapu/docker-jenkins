@@ -15,7 +15,7 @@ pipeline {
           } 
 */
            CBRANCH = sh ( script: "git brach",
-			  returnStatus: true ) == developer
+			  returnStatus: true ) == 0
 	   steps {
 		sh 'printenv'
 
