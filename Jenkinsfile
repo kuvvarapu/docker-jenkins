@@ -9,9 +9,7 @@ pipeline {
 		}
 	  stage ('DEPLOY') {
 	  when {
-	  espression {
-                 return env.BRANCH_NAME == 'developer';
-	       }
+		branch 'developer'
            } 
 	   steps {
 		sh 'git branch'
