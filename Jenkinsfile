@@ -1,6 +1,6 @@
 node {
   stage('Validating developer branch'){
-	def stat = developer
+	String stat = sh 'git branch'
 	 echo "${stat}"
      echo 'printenv'
 	if ( "${stat}" == 'developer' ){
