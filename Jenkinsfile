@@ -8,8 +8,10 @@ pipeline {
         }
         stage('Example Deploy') {
             when {
+	     not {
                 branch 'developer'
             }
+	}
             steps {
                 echo 'Deploying'
             }
