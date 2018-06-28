@@ -20,7 +20,7 @@ pipeline {
 		
            CBRANCH = sh ( script: "git brach",
 			  returnStatus: true ) == developer
-            echo ${CBRANCH}
+            echo "${CBRANCH}"
 		 }
 }
 }
