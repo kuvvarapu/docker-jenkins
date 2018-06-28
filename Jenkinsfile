@@ -1,6 +1,6 @@
 node {
   stage('Validating developer branch'){
-	STAT = sh'(git branch)'
+	STAT=sh'(git branch)'
 	 echo "${STAT}"
      echo 'printenv'
 //	if ( "${STAT}" == 'developer' ){
