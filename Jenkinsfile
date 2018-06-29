@@ -22,7 +22,6 @@ pipeline {
 	       
 	  echo "Running build container"
 		docker { image 'node:7-alpine' }
-	    stages {
 
 		 stage('Container stage'){
 		   steps {
@@ -34,5 +33,4 @@ pipeline {
 	        }
 
          }
-}}
-
+}
