@@ -1,5 +1,5 @@
 pipeline {
-
+	agent any
     stages {
 	stage('Get the developer branch'){
           steps {
@@ -24,7 +24,7 @@ pipeline {
 
          }
 */
-	   stage ('docker build') {	
+	   stage('docker build') {	
     agent {
 	docker { image 'node:7-alpine' }
 	}
