@@ -15,7 +15,6 @@ pipeline {
 	      sh '$(pwd)/CI-CD/UnitTest.sh' 
 		 }
 }
-}
 /*    post {
 	success {
 	       
@@ -32,7 +31,7 @@ pipeline {
      steps {
 	sh 'ls'
 }
-
+}
 }
 }
 
