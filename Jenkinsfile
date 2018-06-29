@@ -1,17 +1,38 @@
-#!/usr
-node {
-  stage('Validating developer branch'){
-//	String stat = sh 'git branch'
-	def stat = developer
-	println ${stat}
-    // echo 'printenv'
-        echo "Hi"
-	if ( "${stat}" == 'developer' ){
-		echo 'I only execute on developer branch'
-}else {
+pipeline {
+    agent any
+    stages {
+	stage('Get the developer branch'){
+          steps {
+//	     git branch: 'developer',
+//		url: 'git@github.com:kuvvarapu/docker-jenkins.git'
+		checkout scm
+		}
+		}
 
-	echo 'I execute elsewhere'
+	  stage ('Unit Test') {
+           steps {
+ 	      sh 'printenv'
+	      sh '$(pwd)/CI-CD/UnitTest.sh' 
+		 }
+}
+}
+    post {
+	success {
+	   agent {
+	       
+	  echo "Running build container"
+		docker { image 'node:7-alpine' }
+	    stages {
 
+		 stage('Container stage'){
+		   steps {
+			sh 'ls'
+			}
 }
+		}  
+
+	        }
+
+         }
 }
-}
+
