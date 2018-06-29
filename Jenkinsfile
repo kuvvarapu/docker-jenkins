@@ -1,8 +1,8 @@
 node {
   stage('Validating developer branch'){
 //	String stat = sh 'git branch'
-	stat=developer
-	 echo $stat
+	stat = developer
+	println stat
     // echo 'printenv'
         echo "Hi"
 	if ( "${stat}" == 'developer' ){
