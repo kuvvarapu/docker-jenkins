@@ -12,7 +12,7 @@ pipeline {
 	  stage ('Unit Test') {
            steps {
  	      sh 'printenv'
-	      sh '$(pwd)/CI-CD/branchcheck.sh' 
+	      sh '$(pwd)/CI-CD/UnitTest.sh' 
 		 }
 }
 }
