@@ -23,11 +23,6 @@ pipeline {
 	  echo "Running build container"
 		docker { image 'node:7-alpine' }
 
-		 stage('Container stage'){
-		   steps {
-			sh 'ls'
-			}
-}
 		}  
 
 	        }
