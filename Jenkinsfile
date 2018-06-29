@@ -1,11 +1,27 @@
-node {
-   stage('developer branch check out') {
-	sh 'ls'
-	git branch: 'developer',url: 'git@github.com:kuvvarapu/Zabbix-Docker-monitoring.git'
-	sh 'git branch'
-}
-   stage('Unit test on developer branch'){
-	sh 'printenv'
+pipeline {
+    agent any
+    stages {
+	stage('Get the developer branch'){
+          steps {
+//	     git branch: 'developer',
+//		url: 'git@github.com:kuvvarapu/docker-jenkins.git'
+		checkout scm
+		}
+		}
 
+	  stage ('Unit Test') {
+           steps {
+ 	      sh 'printenv'
+	      sh '$(pwd)/CI-CD/branchcheck.sh' 
+		 }
 }
 }
+    post {
+	success {
+	  echo "Running build container"
+
+	        }
+
+         }
+}
+
