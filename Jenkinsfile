@@ -1,19 +1,8 @@
-pipeline {
-    agent any
-    stages {
-        stage('Example Build') {
-            steps {
-                echo 'Hello World'
-            }
-        }
-        stage('Example Deploy') {
-            when {
-                branch 'developer'
-                environment name: 'DEPLOY_TO', value: 'developer'
-            }
-            steps {
-                echo 'Deploying'
-            }
-        }
-    }
+node {
+   stage('developer branch check out') {
+
+	git branch: 'development',url: 'git@github.com:kuvvarapu/Zabbix-Docker-monitoring.git'
+	sh 'git branch'
+
+}
 }
