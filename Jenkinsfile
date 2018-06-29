@@ -1,7 +1,5 @@
 pipeline {
-    agent {
-	docker { image 'node:7-alpine' }
-	}
+
     stages {
 	stage('Get the developer branch'){
           steps {
@@ -27,4 +25,14 @@ pipeline {
 
          }
 */
+	   stage ('docker build') {	
+    agent {
+	docker { image 'node:7-alpine' }
+	}
+     steps {
+	sh 'ls'
 }
+
+}
+}
+
