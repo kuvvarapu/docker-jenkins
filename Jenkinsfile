@@ -13,12 +13,12 @@ pipeline {
 
 	  stage ('Unit Test') {
            steps {
- 	      sh 'printenv'
+ 	      sh 'rintenv'
 	      sh '$(pwd)/CI-CD/UnitTest.sh' 
 		 }
 }
 }
-    post {
+/*    post {
 	success {
 	       
 	  echo "Running build container"  
@@ -26,4 +26,5 @@ pipeline {
 	        }
 
          }
+*/
 }
