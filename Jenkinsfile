@@ -1,7 +1,7 @@
 node {
   stage('Validating developer branch'){
 //	String stat = sh 'git branch'
-	String stat = developer
+	def stat = developer
 	println stat
     // echo 'printenv'
         echo "Hi"
