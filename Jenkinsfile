@@ -11,7 +11,7 @@ pipeline {
 
 	  stage ('Unit Test') {
            steps {
- 	      sh 'rintenv'
+ 	      sh 'printenv'
 	      sh '$(pwd)/CI-CD/UnitTest.sh' 
 		 }
 }
