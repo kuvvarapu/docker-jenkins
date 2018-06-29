@@ -1,14 +1,19 @@
-node {
-  stage('Validating developer branch'){
-	String stat = sh 'git branch'
-	 echo "${stat}"
-     echo 'printenv'
-	if ( "${stat}" == 'developer' ){
-		echo 'I only execute on developer branch'
-}else {
-
-	echo 'I execute elsewhere'
-
-}
-}
+pipeline {
+    agent any
+    stages {
+        stage('Example Build') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+        stage('Example Deploy') {
+            when {
+                branch 'production'
+                environment name: 'DEPLOY_TO', value: 'production'
+            }
+            steps {
+                echo 'Deploying'
+            }
+        }
+    }
 }
