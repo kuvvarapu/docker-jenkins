@@ -18,11 +18,8 @@ pipeline {
 }
     post {
 	success {
-	   agent {
 	       
-	  echo "Running build container"
-
-		}  
+	  echo "Running build container"  
 
 	        }
 
