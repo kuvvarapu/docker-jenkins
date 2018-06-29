@@ -1,5 +1,5 @@
 #!/bin/bash
 #Description: This script is used to do Unit testing.
 
-ech "Starting Unit testing"
-ech "error"
+echo "Starting Unit testing"
+echo "error"
