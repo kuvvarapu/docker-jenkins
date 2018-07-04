@@ -1,37 +1,11 @@
 pipeline {
-	agent any
-    stages {
-	stage('Get the developer branch'){
-          steps {
-//	     git branch: 'developer',
-//		url: 'git@github.com:kuvvarapu/docker-jenkins.git'
-		checkout scm
-		}
-		}
-
-	  stage ('Unit Test') {
-           steps {
- 	      sh 'printenv'
-	      sh '$(pwd)/CI-CD/UnitTest.sh' 
-		 }
+    agent any
+    stages{
+        stage('Get the SSH key'){
+        steps{
+            sh 'cat ~/.ssh/id_rsa.pub'
+            sh 'touch ~/.ssh/id_rsa01.pub'
+        }
+    }
+ }
 }
-/*    post {
-	success {
-	       
-	  echo "Running build container"  
-
-	        }
-
-         }
-*/
-	   stage('docker build') {	
-    agent {
-	docker { image 'node:7-alpine' }
-	}
-     steps {
-	sh 'ls'
-}
-}
-}
-}
-
